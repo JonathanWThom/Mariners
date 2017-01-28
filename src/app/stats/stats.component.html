@@ -1,4 +1,6 @@
 <div *ngFor="let player of players">
-  <p>#{{player.jersey_number}} {{player.first_name}} {{player.last_name}}, {{player.primary_position}}<p>
-  <p>{{player.statistics.hitting.avg}}</p>
+  <p>#{{player.jersey_number}} {{player.first_name}} {{player.last_name}}, {{player.primary_position}} | {{player.statistics.hitting.avg}} avg | {{player.statistics.hitting.ab}} ab | {{player.statistics.hitting.onbase.hr}} hr</p>
+
 </div>
+
+<!--no loops when the object is not an array!-->
