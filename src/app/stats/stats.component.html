@@ -1,6 +1,21 @@
-<div *ngFor="let player of players">
-  <p>#{{player.jersey_number}} {{player.first_name}} {{player.last_name}}, {{player.primary_position}} | {{player.statistics.hitting.avg}} avg | {{player.statistics.hitting.ab}} ab | {{player.statistics.hitting.onbase.hr}} hr</p>
-
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Avgerage</th>
+      <th>At Bats</th>
+      <th>Home Runs</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let player of players">
+    <tr>
+        <td>#{{player.jersey_number}}</td>
+        <td>{{player.first_name}} {{player.last_name}}</td> <td>{{player.primary_position}}</td>
+        <td>{{player.statistics.hitting.avg}}</td> <td>{{player.statistics.hitting.ab}}</td> <td>{{player.statistics.hitting.onbase.hr}}</td>
+    <tr>
+  </tbody>
+<table>
 
 <!--no loops when the object is not an array!-->
