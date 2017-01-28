@@ -1,19 +1,49 @@
-<table>
+<table class="responsive-table bordered">
   <thead>
     <tr>
       <th>Number</th>
       <th>Name</th>
       <th>Position</th>
-      <th>Avgerage</th>
+      <th>Hits</th>
+      <th>Doubles</th>
+      <th>Triples</th>
+      <th>Homeruns</th>
+      <th>Walks</th>
       <th>At Bats</th>
-      <th>Home Runs</th>
+      <th>RBI</th>
+      <th>Isolated Slugging</th>
+      <th>On Base Percentage</th>
+      <th>OPS</th>
+      <th>Slugging Percentage</th>
+      <th>Batting Average</th>
+      <th>Ground Out to Fly Out Percentage</th>
+      <th>Strikeouts</th>
+      <th>Sacrifices</th>
+      <th>Runs</th>
+      <th>Stolen Bases</th>
     </tr>
   </thead>
   <tbody *ngFor="let player of players">
     <tr>
         <td>#{{player.jersey_number}}</td>
         <td>{{player.first_name}} {{player.last_name}}</td> <td>{{player.primary_position}}</td>
-        <td>{{player.statistics.hitting.avg}}</td> <td>{{player.statistics.hitting.ab}}</td> <td>{{player.statistics.hitting.onbase.hr}}</td>
+        <td>{{player.statistics.hitting.onbase.h}}</td>
+        <td>{{player.statistics.hitting.onbase.d}}</td>
+        <td>{{player.statistics.hitting.onbase.t}}</td>
+        <td>{{player.statistics.hitting.onbase.hr}}</td>
+        <td>{{player.statistics.hitting.onbase.bb}}</td>
+        <td>{{player.statistics.hitting.ab}}</td>
+        <td>{{player.statistics.hitting.rbi}}</td>
+        <td>{{player.statistics.hitting.iso}}</td>
+        <td>{{player.statistics.hitting.obp}}</td>
+        <td>{{player.statistics.hitting.ops}}</td>
+        <td>{{player.statistics.hitting.slg}}</td>
+        <td>{{player.statistics.hitting.avg}}</td>
+        <td>{{player.statistics.hitting.gofo}}</td>
+        <td>{{player.statistics.hitting.outs.ktotal}}</td>
+        <td>{{player.statistics.hitting.outs.sachit}}</td>
+        <td>{{player.statistics.hitting.runs.total}}</td>
+        <td>{{player.statistics.hitting.steal.stolen}}</td>
     <tr>
   </tbody>
 <table>
