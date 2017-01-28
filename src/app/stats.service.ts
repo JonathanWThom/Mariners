@@ -9,7 +9,7 @@ import { marinersKey } from './api-keys';
 
 @Injectable()
 export class StatsService {
-  private statsUrl = 'http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/43a39081-52b4-4f93-ad29-da7f329ea960/statistics.json?api_key=' + marinersKey.key;
+  private statsUrl = 'http://cors-proxy.htmldriven.com/?url=http://api.sportradar.us/mlb-t5/seasontd/2016/REG/teams/43a39081-52b4-4f93-ad29-da7f329ea960/statistics.json?api_key=' + marinersKey.key;
   constructor (private http: Http) {}
 
   getTeamStats() {

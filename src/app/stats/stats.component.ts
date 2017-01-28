@@ -12,14 +12,16 @@ import { Observable } from 'rxjs/Observable';
 export class StatsComponent implements OnInit {
   //give these object types?
   stats;
+  parsedStats;
   players: any = [];
   constructor(private ss: StatsService) { }
 
   ngOnInit() {
     this.ss.getTeamStats().subscribe(x => {
       this.stats = x;
-      console.log(this.stats);
-      this.players = this.stats.players;
+      console.log(JSON.parse(this.stats.body));
+      this.parsedStats = JSON.parse(this.stats.body);
+      this.players = this.parsedStats.players;
     });
   }
 
