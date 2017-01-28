@@ -18,6 +18,7 @@ export class StatsComponent implements OnInit {
   ngOnInit() {
     this.ss.getTeamStats().subscribe(x => {
       this.stats = x;
+      console.log(this.stats);
       this.players = this.stats.players;
     });
   }
